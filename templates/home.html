@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>MediMate - home</title>
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml" />
+
+  <!-- 
+    - google font link
+  -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="../static/css/style.css" />
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="../static/images/hero-banner.png" />
+  <link rel="preload" as="image" href="../static/images/hero-bg.png" />
+
+</head>
+
+<body id="top">
+  <!-- 
+    - #PRELOADER
+  -->
+
+  <div class="preloader" data-preloader>
+    <div class="circle"></div>
+  </div>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+      <a href="#" class="logo"><i class="ri-heart-pulse-line"></i>
+        <strong>M</strong>edi<strong>M</strong>ate</a>
+
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="#" class="logo"><i class="ri-heart-pulse-line"></i>
+            <strong>M</strong>edi<strong>M</strong>ate</a>
+
+          <button class="nav-close-btn" aria-label="clsoe menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="#top" class="navbar-link title-md">Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link title-md">Doctors</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#service" class="navbar-link title-md">Services</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#blog" class="navbar-link title-md">Blog</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#contact" class="navbar-link title-md">Contact</a>
+          </li>
+        </ul>
+
+        <ul class="social-list">
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+      <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <a href="#" class="btn has-before title-md" id="login-btn">Login/Signup</a>
+        <i class="fas fa-user" id="login-btn"> </i>
+      </div>
+
+      <form action="" class="search-bar-container">
+        >
+        <label for="search-bar" class="fas fa-search"></label>
+      </form>
+    </div>
+  </header>
+
+  <!-- login form container  -->
+
+  <div class="login-form-container">
+    <i class="fas fa-times" id="form-close"></i>
+
+    <form action="">
+      <h3>login</h3>
+      <input type="email" class="box" placeholder="enter your email" />
+      <input type="password" class="box" placeholder="enter your password" />
+      <button class="btn has-before">
+        <span class="span title-md">Login Now</span>
+      </button>
+      <p>forget password&nbsp; <a href="#"> click here</a></p>
+      <p>don't have an account&nbsp; <a href="#"> sign up</a></p>
+    </form>
+  </div>
+
+  <main>
+    <article>
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" style="background-image: url('../static/images/hero-bg.png')" aria-label="home">
+        <div class="container">
+          <div class="hero-content">
+            <p class="hero-subtitle has-before" data-reveal="left">
+              Welcome To MediMate
+            </p>
+
+            <h1 class="headline-lg hero-title" data-reveal="left">
+              Find Doctors.
+            </h1>
+
+            <div class="hero-card" data-reveal="left">
+              <p class="title-lg card-text">
+                Search Recomendated doctors by Symptoms.
+              </p>
+
+              <div class="wrapper">
+                <div class="input-wrapper title-lg">
+                  <form action="/predict" method="post">
+                    <input required type="text" name="symptoms" id="symptoms"
+                      placeholder="Symptoms: itching,aching, sleeping  etc...." class="input-field symptoms" />
+                </div>
+                <button class="btn has-before" type="submit">
+                  <ion-icon name="search"></ion-icon>
+                  <span class="span title-md">Predict</span>
+                </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <figure class="hero-banner" data-reveal="right">
+            <img src="../static/images/hero-banner.png" width="590" height="517" loading="eager" alt="hero banner"
+              class="w-100" />
+          </figure>
+
+        </div>
+      </section>
+      <!-- Results -->
+      {% if predicted_disease %}
+      <section class="result">
+        <div class="container">
+          <h1 class="headline-lg hero-title text-center my-4">Our AI System Results</h1>
+          <div class="result-container">
+            <button class="btn has-before toggle-button disease-btn" data-bs-toggle="modal"
+              data-bs-target="#diseaseModal">Disease</button>
+            <button class="btn has-before toggle-button description-btn" data-bs-toggle="modal"
+              data-bs-target="#descriptionModal">Description</button>
+            <button class="btn has-before toggle-button precaution-btn" data-bs-toggle="modal"
+              data-bs-target="#precautionModal">Precaution</button>
+            <button class="btn has-before toggle-button medications-btn" data-bs-toggle="modal"
+              data-bs-target="#medicationsModal">Medications</button>
+            <button class="btn has-before toggle-button workouts-btn" data-bs-toggle="modal"
+              data-bs-target="#workoutsModal">Workouts</button>
+            <button class="btn has-before toggle-button diets-btn" data-bs-toggle="modal" data-bs-target="#dietsModal">
+              Diets</button>
+          </div>
+        </div>
+
+
+        <!-- Disease Modal -->
+        <div class="modal fade" id="diseaseModal" tabindex="-1" aria-labelledby="diseaseModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" style="background-color: #020606; color:white;">
+                <!-- Set header background color inline -->
+                <h5 class="modal-title" id="diseaseModalLabel">Predicted Disease</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body" style="background-color: modal-body-color;">
+                <!-- Set modal body background color inline -->
+                <p>{{ predicted_disease }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Description Modal -->
+        <div class="modal fade" id="descriptionModal" tabindex="-1" aria-labelledby="descriptionModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" style="background-color: #020606; color:white;">
+                <h5 class="modal-title" id="descriptionModalLabel">Description</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>{{ dis_des }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Precaution Modal -->
+        <div class="modal fade" id="precautionModal" tabindex="-1" aria-labelledby="precautionModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" style="background-color: #020606; color:white;">
+                <h5 class="modal-title" id="precautionModalLabel">Precaution</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <ul style="color:white;">
+                  {% for i in my_precautions %}
+                  <li style="color:white;">{{ i }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <!-- Medications Modal -->
+        <div class="modal fade" id="medicationsModal" tabindex="-1" aria-labelledby="medicationsModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" style="background-color: #020606; color:white;">
+                <h5 class="modal-title" id="medicationsModalLabel">Medications</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <ul style="color:white;">
+                  {% for i in medications %}
+                  <li style="color:white;">{{ i }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Workouts Modal -->
+        <div class="modal fade" id="workoutsModal" tabindex="-1" aria-labelledby="workoutsModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" style="background-color: #020606; color:white;">
+                <h5 class="modal-title" id="workoutsModalLabel">Workouts</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <ul style="color:white;">
+                  {% for i in workout %}
+                  <li style="color:white;">{{ i }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Diets Modal -->
+        <div class="modal fade" id="dietsModal" tabindex="-1" aria-labelledby="dietsModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" style="background-color: #020606; color:white;">
+                <h5 class="modal-title" id="dietsModalLabel">Diets</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <ul style="color:white;">
+                  {% for i in my_diet %}
+                  <li style="color:white;">{{ i }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {% endif %}
+
+      <!-- Show Recomendated Doctors List -->
+      <section>
+        {% if doctors %}
+        <table name="doctors" class="doctors" id="doctors">
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Degree</th>
+            <th>Years of Exprience</th>
+            <th>Service of Disease</th>
+            <th>Ratings</th>
+            <th>Free</th>
+            <th>Action</th>
+          </tr>
+          {% for doctor in doctors %}
+          <tr></tr>
+          <td>{{doctor[0]}}</td>
+          <td>{{doctor[4]}}</td>
+          <td>{{doctor[5]}}</td>
+          <td>{{doctor[1]}} Years</td>
+          <td>{{doctor[2]}}</td>
+          <td>{{doctor[3]}} ⭐</td>
+          <td>{{doctor[6]}} &#8377; </td>
+          <td class="btn has-before">
+            <a class="span title-md" href="#">Take Appointment</a>
+          </td>
+          </tr>
+          {% endfor %}
+        </table>
+        {% endif %}
+      </section>
+      <!-- appointmenting section starts   -->
+      <section class="appointment" id="appointment">
+        <div class="row">
+          <div class="image">
+            <img src="static/images/appointment-img.svg" alt="">
+          </div>
+          <form action="/add-doctor" method="post">
+            <h3>Doctor Registration</h3>
+            <input required type="text" name="name" id="name" placeholder="Enter The Name" class="box">
+            <input required type="text" name="disease" id="disease" placeholder="Enter The Service Disease" class="box">
+            <input required type="number" name="exprience" id="exprience" class="box" placeholder="Enter The Exprience">
+            <input required type="number" placeholder="Enter The Rating" step="0.1" min="0" max="5" name="rating"
+              id="rating" class="box">
+            <button class="btn has-before">
+              <span class="span title-md">Submit&nbsp; Now</span>
+            </button>
+          </form>
+
+        </div>
+      </section>
+
+      <!-- appointmenting section ends -->
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about" aria-labelledby="about-label">
+        <div class="container">
+          <div class="about-content">
+            <p class="section-subtitle title-lg has-after" id="about-label" data-reveal="left">
+              About Us
+            </p>
+
+            <h2 class="headline-md" data-reveal="left">
+              Experienced Workers
+            </h2>
+
+            <p class="section-text" data-reveal="left">
+              Aliquam faucibus, odio nec commodo aliquam, neque felis placerat
+              dui, a porta ante lectus dapibus est. Aliquam
+            </p>
+
+            <ul class="tab-list" data-reveal="left">
+              <li>
+                <button class="tab-btn active">Vision</button>
+              </li>
+
+              <li>
+                <button class="tab-btn">Mission</button>
+              </li>
+
+              <li>
+                <button class="tab-btn">Strategy</button>
+              </li>
+            </ul>
+
+            <p class="tab-text" data-reveal="left">
+              Aliquam faucibus, odio nec commodo aliquam, neque felis placerat
+              dui, a porta ante lectus dapibus est. Aliquam a bibendum mi, sed
+              condimentum
+            </p>
+
+            <div class="wrapper">
+              <ul class="about-list">
+                <li class="about-item" data-reveal="left">
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+
+                  <span class="span">Sonsectetur adipisicing elit</span>
+                </li>
+
+                <li class="about-item" data-reveal="left">
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+
+                  <span class="span">Exercitation ullamco laboris</span>
+                </li>
+
+                <li class="about-item" data-reveal="left">
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+
+                  <span class="span">Eiusmod tempor incididunt</span>
+                </li>
+
+                <li class="about-item" data-reveal="left">
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+
+                  <span class="span">Aolore magna aliqua</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <figure class="about-banner" data-reveal="right">
+            <img src="../static/images/about-banner.png" width="554" height="678" loading="lazy" alt="about banner"
+              class="w-100" />
+          </figure>
+        </div>
+      </section>
+
+      <!-- 
+        - #LISTING
+      -->
+
+      <section class="section listing" aria-labelledby="listing-label" id="service">
+        <div class="container">
+          <ul class="grid-list">
+            <li>
+              <p class="section-subtitle title-lg" id="listing-label" data-reveal="left">
+                Doctors Listing
+              </p>
+
+              <h2 class="headline-md" data-reveal="left">
+                Browse by specialist
+              </h2>
+            </li>
+
+            <li>
+              <div class="listing-card" data-reveal="bottom">
+                <div class="card-icon">
+                  <img src="../static/images/icon-1.png" width="71" height="71" loading="lazy" alt="icon" />
+                </div>
+
+                <div>
+                  <h3 class="headline-sm card-title">Psychiatry</h3>
+
+                  <p class="card-text">Porta velit</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="listing-card" data-reveal="bottom">
+                <div class="card-icon">
+                  <img src="../static/images/icon-2.png" width="71" height="71" loading="lazy" alt="icon" />
+                </div>
+
+                <div>
+                  <h3 class="headline-sm card-title">Gynecology</h3>
+
+                  <p class="card-text">Mattis augue</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="listing-card" data-reveal="bottom">
+                <div class="card-icon">
+                  <img src="../static/images/icon-4.png" width="71" height="71" loading="lazy" alt="icon" />
+                </div>
+
+                <div>
+                  <h3 class="headline-sm card-title">Pulmonology</h3>
+
+                  <p class="card-text">Mauris laoreet</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="listing-card" data-reveal="bottom">
+                <div class="card-icon">
+                  <img src="../static/images/icon-5.png" width="71" height="71" loading="lazy" alt="icon" />
+                </div>
+
+                <div>
+                  <h3 class="headline-sm card-title">Orthopedics</h3>
+
+                  <p class="card-text">Convallis vulputate</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="listing-card" data-reveal="bottom">
+                <div class="card-icon">
+                  <img src="../static/images/icon-6.png" width="71" height="71" loading="lazy" alt="icon" />
+                </div>
+
+                <div>
+                  <h3 class="headline-sm card-title">Pediatrics</h3>
+
+                  <p class="card-text">Posuere maecenas</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="listing-card" data-reveal="bottom">
+                <div class="card-icon">
+                  <img src="../static/images/icon-7.png" width="71" height="71" loading="lazy" alt="icon" />
+                </div>
+
+                <div>
+                  <h3 class="headline-sm card-title">Osteology</h3>
+
+                  <p class="card-text">Nisi nullam</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 
+        - #BLOG
+      -->
+
+      <section class="section blog" aria-labelledby="blog-label" id="blog">
+        <div class="container">
+          <p class="section-subtitle title-lg text-center" id="blog-label" data-reveal="bottom">
+            News & Article
+          </p>
+
+          <h2 class="section-title headline-md text-center" data-reveal="bottom">
+            Latest Articles
+          </h2>
+
+          <ul class="grid-list">
+            <li>
+              <div class="blog-card has-before has-after" data-reveal="bottom">
+                <div class="meta-wrapper">
+                  <div class="card-meta">
+                    <ion-icon name="person-outline"></ion-icon>
+
+                    <span class="span">By Admin</span>
+                  </div>
+
+                  <div class="card-meta">
+                    <ion-icon name="folder-outline"></ion-icon>
+
+                    <span class="span">Specialist</span>
+                  </div>
+                </div>
+
+                <h3 class="headline-sm card-title">
+                  Could intermittent fasting reduce breast cancer
+                </h3>
+
+                <time class="title-sm date" datetime="2024-01-28">28 January, 2024</time>
+
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                  aliquyam erat
+                </p>
+
+                <a href="#" class="btn-text title-lg">Read More</a>
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card has-before has-after" data-reveal="bottom">
+                <div class="meta-wrapper">
+                  <div class="card-meta">
+                    <ion-icon name="person-outline"></ion-icon>
+
+                    <span class="span">By Admin</span>
+                  </div>
+
+                  <div class="card-meta">
+                    <ion-icon name="folder-outline"></ion-icon>
+
+                    <span class="span">Specialist</span>
+                  </div>
+                </div>
+
+                <h3 class="headline-sm card-title">
+                  Give children more autonomy during the pandemic
+                </h3>
+
+                <time class="title-sm date" datetime="2024-01-28">28 January, 2024</time>
+
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                  aliquyam erat
+                </p>
+
+                <a href="#" class="btn-text title-lg">Read More</a>
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card has-before has-after" data-reveal="bottom">
+                <div class="meta-wrapper">
+                  <div class="card-meta">
+                    <ion-icon name="person-outline"></ion-icon>
+
+                    <span class="span">By Admin</span>
+                  </div>
+
+                  <div class="card-meta">
+                    <ion-icon name="folder-outline"></ion-icon>
+
+                    <span class="span">Specialist</span>
+                  </div>
+                </div>
+
+                <h3 class="headline-sm card-title">
+                  How do binge eating and drinking impact the liver?
+                </h3>
+
+                <time class="title-sm date" datetime="2024-01-28">28 January, 2024</time>
+
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                  aliquyam erat
+                </p>
+
+                <a href="#" class="btn-text title-lg">Read More</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer" style="background-image: url('../static/images/footer-bg.png')" id="contact">
+    <div class="container">
+      <div class="section footer-top">
+        <div class="footer-brand" data-reveal="bottom">
+          <a href="#" class="logo"><i class="ri-heart-pulse-line"></i>
+            <strong>M</strong>edi<strong>M</strong>ate</a>
+
+          <ul class="contact-list has-after">
+            <li class="contact-item">
+              <div class="item-icon">
+                <ion-icon name="mail-open-outline"></ion-icon>
+              </div>
+
+              <div>
+                <p>
+                  Main Email :
+                  <a href="mailto:contact@website.com" class="contact-link">contact@&shy;website.com</a>
+                </p>
+
+                <p>
+                  Inquiries :
+                  <a href="mailto:Info@mail.com" class="contact-link">Info@mail.com</a>
+                </p>
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="item-icon">
+                <ion-icon name="call-outline"></ion-icon>
+              </div>
+
+              <div>
+                <p>
+                  Office Telephone :
+                  <a href="tel:0029129102320" class="contact-link">0029129102320</a>
+                </p>
+
+                <p>
+                  Mobile :
+                  <a href="tel:000232439493" class="contact-link">000 2324 39493</a>
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-list" data-reveal="bottom">
+          <p class="headline-sm footer-list-title">About Us</p>
+
+          <p class="text">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+          </p>
+
+          <address class="address">
+            <ion-icon name="map-outline"></ion-icon>
+
+            <span class="text">
+              2416 Mapleview Drive <br />
+              Tampa, FL 33634
+            </span>
+          </address>
+        </div>
+
+        <ul class="footer-list" data-reveal="bottom">
+          <li>
+            <p class="headline-sm footer-list-title">Services</p>
+          </li>
+
+          <li>
+            <a href="#" class="text footer-link">Conditions</a>
+          </li>
+
+          <li>
+            <a href="#" class="text footer-link">Listing</a>
+          </li>
+
+          <li>
+            <a href="#" class="text footer-link">How It Works</a>
+          </li>
+
+          <li>
+            <a href="#" class="text footer-link">What We Offer</a>
+          </li>
+
+          <li>
+            <a href="#" class="text footer-link">Latest News</a>
+          </li>
+
+          <li>
+            <a href="#" class="text footer-link">Contact Us</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list" data-reveal="bottom">
+          <li>
+            <p class="headline-sm footer-list-title">Useful Links</p>
+          </li>
+
+          <li>
+            <a href="#" class="text footer-link">Conditions</a>
+          </li>
+
+          <li>
+            <a href="#" class="text footer-link">Terms of Use</a>
+          </li>
+
+          <li>
+            <a href="#" class="text footer-link">Our Services</a>
+          </li>
+
+          <li>
+            <a href="#" class="text footer-link">Join as a Doctor</a>
+          </li>
+
+          <li>
+            <a href="#" class="text footer-link">New Guests List</a>
+          </li>
+
+          <li>
+            <a href="#" class="text footer-link">The Team List</a>
+          </li>
+        </ul>
+
+        <div class="footer-list" data-reveal="bottom">
+          <p class="headline-sm footer-list-title">Subscribe</p>
+
+          <form action="" class="footer-form">
+            <input type="email" name="email" placeholder="Email" class="input-field title-lg" />
+
+            <button type="submit" class="btn has-before title-md">
+              Subscribe
+            </button>
+          </form>
+
+          <p class="text">
+            Get the latest updates via email. Any time you may unsubscribe
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="text copyright">
+          &copy; MediMate 2024 | All Rights Reserved by Sneha
+        </p>
+
+        <ul class="social-list">
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-google"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="../static/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
