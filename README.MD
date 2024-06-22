@@ -6,7 +6,7 @@
 
 Clone Project
 ```
-git clone https://github.com/vishnu95075/MediMate.git
+git clone https://github.com/snehachakrabortty/MediMate_Main
 
 ```
 
